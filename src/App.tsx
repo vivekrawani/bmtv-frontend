@@ -15,11 +15,12 @@ function App() {
 
   const {data, loading} = useQuery(query);
 
-  console.log(data);
+if(loading) return(<div>Loading</div>)
 
   return (
     <div>
       <Card />
+      {JSON.stringify(data)}
     </div>
   )
 }
